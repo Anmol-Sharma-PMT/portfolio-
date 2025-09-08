@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmol Sharma - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section {
+            scroll-margin-top: 64px; /* Adjust this value based on your navbar height */
+        }
+        /* Simple transition for toast */
+        #toast {
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        #toast.hidden {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-900/80 backdrop-blur-md fixed w-full top-0 z-50 shadow-lg shadow-black/10">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <a href="#" class="text-2xl font-bold text-white">Anmol Sharma</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">About</a>
+                    <a href="#internship" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Internship</a>
+                    <a href="#projects" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Projects</a>
+                    <a href="#education" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Education</a>
+                    <a href="#skills" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Skills</a>
+                    <a href="#certifications" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Certifications</a>
+                    <a href="#contact-me" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Contact Me</a>
+                    <a href="#contact" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Get In Touch</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#about" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300">About</a>
+            <a href="#internship" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300">Internship</a>
+            <a href="#projects" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300">Projects</a>
+            <a href="#education" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300">Education</a>
+            <a href="#skills" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300">Skills</a>
+            <a href="#certifications" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300">Certifications</a>
+            <a href="#contact-me" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300">Contact Me</a>
+            <a href="#contact" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300">Get In Touch</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gray-900 pt-32 pb-24 sm:pt-40 sm:pb-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 id="main-headline" class="text-4xl md:text-6xl font-bold text-white leading-tight">
+                Anmol Sharma
+                <span class="block text-2xl md:text-4xl font-normal text-indigo-300 mt-2">MBA in Pharmaceutical Management</span>
+            </h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+                Product Managmenet trainee at Unijules Lifescience pvt limited
+            </p>
+            <div class="mt-8 flex justify-center gap-4 flex-wrap">
+                <a href="#contact" class="bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-all duration-300 shadow-lg shadow-indigo-500/20">
+                    Get In Touch
+                </a>
+                <a href="#projects" class="bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition-all duration-300">
+                    View My Work
+                </a>
+                <a href="#education" class="bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition-all duration-300">
+                    Education
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- About Me Section -->
+        <section id="about" class="section my-16">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/3">
+                    <!-- I have replaced the old link with a new, stable one to ensure your image always loads. -->
+                    <img src="C:\Users\DELL\Desktop\website\Anmol_cv image.jpg" onerror="this.onerror=null;this.src='https://placehold.co/256x256/1F2937/FFFFFF?text=AS';" alt="Anmol Sharma" class="rounded-full shadow-2xl shadow-indigo-500/20 mx-auto w-64 h-64 object-cover">
+                </div>
+                <div class="md:w-2/3">
+                    <h3 class="text-2xl font-semibold text-indigo-400 mb-4">Hello! I'm Anmol Sharma</h3>
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                       Entry-level Product Management aspirant with an MBA in Pharmaceutical Management and experience in market research and marketing. Skilled in product lifecycle understanding, competitive benchmarking, and cross-functional collaboration. Proficient in data analysis tools (Excel, Power BI, SPSS) and project management platforms. Eager to contribute to pharmaceutical product launches, portfolio growth, and evidence-based decision-making.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        A part from which, I enjoy exploring the latest technology trends,playing chess, and hiking. I'm always eager to learn and take on new challenges.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Internship Section -->
+        <section id="internship" class="section my-16">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Internship Experience</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="relative border-l-2 border-indigo-500 pl-10 space-y-12">
+                    <!-- Internship 1 -->
+                    <div class="relative">
+                        <div class="absolute -left-[49px] top-1 h-4 w-4 rounded-full bg-indigo-400"></div>
+                        <h3 class="text-xl font-bold text-white">Product Management Intern</h3>
+                        <p class="font-semibold text-indigo-400 mb-1">Unijules lifescience private limited</p>
+                        <p class="text-sm text-gray-400 mb-3">September 2025 - November 2025</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-1">
+                            <li>Performed market research and competitor analysis for therapeutic categories.</li>
+                            <li>Assisted in brand lifecycle management, pricing, and launch planning.</li>
+                            <li>Coordinated with sales, medical, and regulatory teams for compliant campaigns.</li>
+                            <li>Developed dashboards and reports to track sales and product performance.</li>
+                        </ul>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -left-[49px] top-1 h-4 w-4 rounded-full bg-indigo-400"></div>
+                        <h3 class="text-xl font-bold text-white">Business Collaboration Intern</h3>
+                        <p class="font-semibold text-indigo-400 mb-1">Rasaya healthcare</p>
+                        <p class="text-sm text-gray-400 mb-3">May 2025 - June 2025</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-1">
+                            <li>Built a database of 100+ diagnostic centers and imaging facilities across M.P.</li>
+                            <li>Conducted market research and compiled data on potential partners.</li>
+                            <li>Assisted in client onboarding, proposal follow-ups, and documentation.</li>
+                            <li>Recognized as "Star Intern" for outstanding performance.</li>
+                        </ul>
+                    </div>
+                    <!-- Internship 2 -->
+                    <div class="relative">
+                        <div class="absolute -left-[49px] top-1 h-4 w-4 rounded-full bg-indigo-400"></div>
+                        <h3 class="text-xl font-bold text-white">Management Trainee</h3>
+                        <p class="font-semibold text-indigo-400 mb-1">Modern Laboratories</p>
+                        <p class="text-sm text-gray-400 mb-3">Jan 2025 - Jan 2025</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-1">
+                            <li>Analyzed export data trends and optimized documentation workflows.</li>
+                            <li>Gained experience in international trade software APAFDI and Prowess.</li>
+                            <li>Supported international business through email marketing and market analysis.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Projects Section -->
+        <section id="projects" class="section my-16">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-indigo-500/40 transition-shadow duration-300 flex flex-col">
+                    <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Project+1" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="project-title text-xl font-bold text-white mb-2">Market research for Rasaya Telerad</h3>
+                        <p class="project-description text-gray-400 mb-4 flex-grow">Performed market survery and market research during my internship at Rasaya healthcare and find out trends in radiology domains for telereporting and published summer internship report with title "Market research for rasaya telerad"</p>
+                        <div class="mt-auto pt-4">
+                            <a href="https://drive.google.com/file/d/1XnQJaUv-pYTvo75uSIACjb7Rg03E26S6/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 font-semibold inline-block mb-4">View Project &rarr;</a>
+                            <button class="generate-desc-btn bg-indigo-600 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 w-full flex items-center justify-center">
+                               
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-indigo-500/40 transition-shadow duration-300 flex flex-col">
+                    <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Project+2" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="project-title text-xl font-bold text-white mb-2">Market analysis and marketing strategies on Rituximab drug (Biosimilar)</h3>
+                        <p class="project-description text-gray-400 mb-4 flex-grow">Make an report on drug Rituximab used in </p>
+                         <div class="mt-auto pt-4">
+                            <a href="Presentation.Rituximab[1].pptx - Google Slides" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 font-semibold inline-block mb-4">View Project &rarr;</a>
+                            <button class="generate-desc-btn bg-indigo-600 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 w-full flex items-center justify-center">
+                               
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section my-16">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Education</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-indigo-400">Master of Business Administration</h3>
+                    <p class="text-gray-300">Modern Group of Institute, Indore</p>
+                    <p class="text-gray-400 text-sm">2024-2026</p>
+                </div>
+                 <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-indigo-400">Bachelors of Science (Biological)</h3>
+                    <p class="text-gray-300">Barkatullah University, Bhopal</p>
+                    <p class="text-gray-400 text-sm">2021-2024</p>
+                </div>
+                 <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-indigo-400">Diploma in Computer Application</h3>
+                    <p class="text-gray-300">Makhanlal Chaturvedi University, Bhopal</p>
+                    <p class="text-gray-400 text-sm">2023-2024</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section my-16">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Skills & Technologies</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-gray-700 text-gray-200 text-sm font-medium px-4 py-2 rounded-full">Microsoft Excel</span>
+                    <span class="bg-gray-700 text-gray-200 text-sm font-medium px-4 py-2 rounded-full">Power BI</span>
+                    <span class="bg-gray-700 text-gray-200 text-sm font-medium px-4 py-2 rounded-full">MS Office</span>
+                    <span class="bg-gray-700 text-gray-200 text-sm font-medium px-4 py-2 rounded-full">Marketing</span>
+                    <span class="bg-gray-700 text-gray-200 text-sm font-medium px-4 py-2 rounded-full">Computer Literacy</span>
+                    <span class="bg-gray-700 text-gray-200 text-sm font-medium px-4 py-2 rounded-full">Product Management</span>
+                    <span class="bg-gray-700 text-gray-200 text-sm font-medium px-4 py-2 rounded-full">Presentation Skills</span>
+                    <span class="bg-gray-700 text-gray-200 text-sm font-medium px-4 py-2 rounded-full">Team Management</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section my-16">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Certifications</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#" class="bg-gray-700 text-gray-200 text-sm font-medium px-4 py-2 rounded-full hover:bg-indigo-600 transition-colors">Financial Literacy Course | NISM</a>
+                    <a href="#" class="bg-gray-700 text-gray-200 text-sm font-medium px-4 py-2 rounded-full hover:bg-indigo-600 transition-colors">Microsoft Excel | Great Learning</a>
+                    <a href="#" class="bg-gray-700 text-gray-200 text-sm font-medium px-4 py-2 rounded-full hover:bg-indigo-600 transition-colors">Marketing Foundation | Great Learning</a>
+                    <a href="#" class="bg-gray-700 text-gray-200 text-sm font-medium px-4 py-2 rounded-full hover:bg-indigo-600 transition-colors">Power BI | Data Flair</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Me Section -->
+        <section id="contact-me" class="section my-16">
+            <h2 class="text-3xl font-bold text-center text-white mb-8">Contact Me</h2>
+            <div class="flex justify-center items-center gap-6">
+                <a href="https://www.linkedin.com/in/anmol-sharma-aa6b28240" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-600 transition-all duration-300 shadow-lg">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="mailto:anmolsharma.mba@gmail.com" class="flex items-center gap-3 bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-600 transition-all duration-300 shadow-lg">
+                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.003 5.884L10 11.882l7.997-5.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 6-8-6V16a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                    <span>Email</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section my-16">
+            <h2 class="text-3xl font-bold text-center text-white mb-4">Get In Touch</h2>
+            <p class="text-center text-gray-400 mb-8 max-w-lg mx-auto">I'm currently open to positions like Product management, International business development and marketing management, and open to discussing new projects. Feel free to reach out!!</p>
+            <div class="max-w-lg mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
+                <!-- 
+                  IMPORTANT: Follow the steps from our conversation to get your Google Form IDs.
+                  1. Create a Google Form with 'Name', 'Email', and 'Message' fields.
+                  2. Get the pre-filled link to find your unique Form ID and entry IDs.
+                  3. Replace the placeholder values below.
+                -->
+                <form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSeA_aIbRTSjiHCmtJ-EomZ2U9E5RTXBeqC-sPMLxUfRFZtxAQ/formResponse" method="POST">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-300 mb-2">Name</label>
+                        <input type="text" id="name" name="entry.1968383998" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-4 text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-300 mb-2">Email</label>
+                        <input type="email" id="email" name="entry.1649381209" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-4 text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-300 mb-2">Message</label>
+                        <textarea id="message" name="entry.1833181917" rows="4" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-4 text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-all duration-300 w-full">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800/50 mt-16">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-400">
+            <p>&copy; 2025 Anmol Sharma. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-red-600 text-white py-3 px-5 rounded-lg shadow-lg hidden">
+        <p id="toast-message"></p>
+    </div>
+    <!-- Success Toast Notification -->
+    <div id="toast-success" class="fixed bottom-5 right-5 bg-green-600 text-white py-3 px-5 rounded-lg shadow-lg hidden">
+        <p id="toast-success-message">Message sent successfully!</p>
+    </div>
+
+    <script>
+        // --- UI Interactivity Script ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('nav a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // --- Toast Notification Handler ---
+        function showToast(message, isSuccess = false) {
+            const toast = isSuccess ? document.getElementById('toast-success') : document.getElementById('toast');
+            const toastMessageElem = isSuccess ? document.getElementById('toast-success-message') : document.getElementById('toast-message');
+
+            if (toast && toastMessageElem) {
+                toastMessageElem.textContent = message;
+                toast.classList.remove('hidden');
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                }, 3000);
+            }
+        }
+
+        // --- Modern Google Form Submission Handler ---
+        const form = document.getElementById('contact-form');
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                // 1. Prevent the default browser action (reloading/redirecting)
+                e.preventDefault();
+
+                // 2. Get the data from the form
+                const formData = new FormData(this);
+
+                // 3. Send the data in the background
+                fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'no-cors' // This is required for Google Forms
+                })
+                .then(() => {
+                    // 4. If submission is successful, show success and reset the form
+                    showToast("Message sent successfully! Thank you.", true);
+                    form.reset(); // Clear the form fields
+                })
+                .catch(error => {
+                    // 5. If there was a network error
+                    console.error('Error submitting the form:', error);
+                    showToast("An error occurred. Please try again.", false);
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>
+
